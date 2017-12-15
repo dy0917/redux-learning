@@ -1,6 +1,8 @@
 import React  from 'react';
 import {Link} from 'react-router';
 import './app.scss';
+var path = require('path');
+global.appRoot = path.resolve(__dirname);
 
 const App = (props) => {
   return (
