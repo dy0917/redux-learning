@@ -14,21 +14,21 @@ export const fetchBooksSuccess = (books) => {
   return {
     type: actionTypes.FETCH_BOOKS_SUCCESS,
     books
-  }
+  };
 };
 
 export const createBookSuccess = (book) => {
   return {
     type: actionTypes.CREATE_BOOK_SUCCESS,
     book
-  }
+  };
 };
 
 export const fetchBookByIdSuccess = (book) => {
   return {
     type: actionTypes.FETCH_BOOK_BY_ID_SUCCESS,
     book
-  }
+  };
 };
 
 export const fetchBooks = () => {
@@ -72,14 +72,14 @@ export const addToCartSuccess = (item) => {
   return {
     type: actionTypes.ADD_TO_CART_SUCCESS,
     item
-  }
+  };
 };
 
 export const addToCart = (item) => {
   return (dispatch) => {
     return Axios.post('http://57c64baac1fc8711008f2a82.mockapi.io/Cart', item)
       .then(response => {
-        dispatch(addToCartSuccess(response.data))
+        dispatch(addToCartSuccess(response.data));
       })
       .catch(error => {
         throw(error);
@@ -91,14 +91,14 @@ export const fetchCartSuccess = (items) => {
   return {
     type: actionTypes.FETCH_CART_SUCCESS,
     items
-  }
+  };
 };
 
 export const fetchCart = () => {
   return (dispatch) => {
     return Axios.get('http://57c64baac1fc8711008f2a82.mockapi.io/Cart')
       .then(response => {
-        dispatch(fetchCartSuccess(response.data))
+        dispatch(fetchCartSuccess(response.data));
       })
       .catch(error => {
         throw(error);

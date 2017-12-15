@@ -15,6 +15,9 @@ export default {
     'webpack-hot-middleware/client?reload=true',
     './src/index'
   ],
+  node: {
+    fs: 'empty'
+  },
   target: 'web', // necessary per https://webpack.github.io/docs/testing.html#compile-and-test
   output: {
     path: `${__dirname}/src`, // Note: Physical files are only output by the production build task `npm run build`.

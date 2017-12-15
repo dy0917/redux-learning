@@ -5,6 +5,10 @@ import { Link } from 'react-router';
 import * as bookActions from '../../actions/bookActions';
 
 class Book extends React.Component{
+componentWillMount() {
+  this.props.fetchBook();
+  }
+
   constructor(props){
     super(props);
   }
@@ -55,7 +59,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createBook: book => dispatch(bookActions.createBook(book))
+    createBook: book => dispatch(bookActions.createBook(book)),
+    fetchBook: books => dispatch(bookActions.fetchBooks())
   }
 };
 

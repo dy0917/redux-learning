@@ -15,7 +15,7 @@ const BookDetails = ({book, addToCart}) => {
             <li><stron>Price: </stron> ${book.price}</li>
             <li><stron>Year: </stron> {book.year}</li>
             <br/>
-            <button className="btn btn-primary" onClick={e => addToCart(book)}>Buy</button>
+            <button className="btn btn-primary" onClick={() => addToCart(book)}>Buy</button>
           </ul>
         </div>
       </div>
